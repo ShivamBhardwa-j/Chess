@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.chess-board {
+    display: inline-block;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.row {
+    display: flex;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.white {
+    background: #f0d9b5;
+}
+
+.black {
+    background: #b58863;
+}
+
+.square:hover {
+    background-color: rgba(255, 255, 0, 0.4);
+}
+
+.chess-board .row:nth-child(even) .square:nth-child(odd),
+.chess-board .row:nth-child(odd) .square:nth-child(even) {
+    background: #b58863;
+}
+
+.chess-board .row:nth-child(even) .square:nth-child(even),
+.chess-board .row:nth-child(odd) .square:nth-child(odd) {
+    background: #f0d9b5;
+}
